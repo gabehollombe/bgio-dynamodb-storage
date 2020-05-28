@@ -4,6 +4,13 @@ DynamoDB storage database connector for [boardgame.io](https://boardgame.io/)
 
 This package provides a database connector that allows you to use an Amazon [DynamoDB](https://aws.amazon.com/dynamodb/) table to store boardgame.io metadata and game state.
 
+## Important Note
+
+**This is alpha software.** The tests cover the same set of behavior as the [FlatFile db included with Boardgame.io](https://github.com/nicolodavis/boardgame.io/blob/master/src/server/db/flatfile.test.ts), but it's not yet included in any production software. 
+
+*Hopefully it will work for you, but please tread with care and contribute improvements.*
+
+
 ## Installation
 
 ```sh
