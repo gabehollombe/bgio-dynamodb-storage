@@ -100,7 +100,7 @@ describe('DynamoStorage', () => {
       metadata: metadata as Server.GameMetadata,
     });
 
-    // Sarcastic 'Thank You' to DynamoDB local for not supporting strongly consistent reads,
+    // DynamoDB local (used for tests) doesn't provide an option for strongly consistent reads,
     // so we need to sleep here to avoid db.clear() race conditions from afterEach
     await sleep(1000);
     const keys = await db.listGames();
@@ -124,7 +124,7 @@ describe('DynamoStorage', () => {
     await db.setState('game3', state as State);
     await db.clear();
 
-    // Same reason for sleep here as above
+    // Same reason for sleep here (DDB Local read consistency)
     await sleep(1000);
     const keys2 = await db.listGames();
     expect(keys2).toHaveLength(0);
