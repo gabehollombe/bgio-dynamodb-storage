@@ -46,7 +46,7 @@
     "version-bump-prompt": "^6.0.3"
   },
   "dependencies": {
-    "aws-sdk": "^2.674.0",
+    "aws-sdk": "^2.814.0",
     "boardgame.io": "^0.39.11"
   }
 }
